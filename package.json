@@ -1,0 +1,11 @@
+{
+  "name": "demorgan",
+  "version": "0.0.0",
+  "description": "Evaluation Rules for 'de Morgan's laws",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+}
