@@ -6,17 +6,19 @@ var Variable = require('../js/variable');
 var Not = require('../js/not.js');
 
 describe('Parser', function(){
-    it('should parse a variable', function(){
-	var parser = new Parser();
+    var parser;
 
+    beforeEach(function(){
+	parser = new Parser();
+    });
+
+    it('should parse a variable', function(){
         var formula = parser.parse("a")
 
 	expect(formula.equals(new Variable('a'))).to.be.ok;
     });
 
     it('should parse a valid NOT operator', function(){
-	var parser = new Parser();
-
         var formula = parser.parse("NOT a")
 
 	expect(formula.equals(new Not(new Variable('a')))).to.be.ok;
