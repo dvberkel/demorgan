@@ -12,6 +12,12 @@ describe('Parser', function(){
 	parser = new Parser();
     });
 
+    it('should throw on invalid expression', function(){
+	expect(function(){
+	    parser.parse('%');
+	}).to.throw('invalid');
+    });
+
     it('should parse a variable', function(){
         var formula = parser.parse("a")
 

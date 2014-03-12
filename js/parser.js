@@ -16,5 +16,7 @@ Parser.prototype.parse = function(input) {
 	return new Variable(tokens[0].name);
     } else if (tokens[0].type == 'operator' && tokens[0].kind == 'not') {
 	return new Not(new Variable(tokens[1].name));
+    } else {
+	throw 'invalid';
     }
 }
