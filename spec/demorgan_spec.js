@@ -13,6 +13,14 @@ describe('Parser', function(){
 
 	expect(formula.equals(new Variable('a'))).to.be.ok;
     });
+
+    it('should parse a valid NOT operator', function(){
+	var parser = new Parser();
+
+        var formula = parser.parse("NOT a")
+
+	expect(formula.equals(new Not(new Variable('a')))).to.be.ok;
+    });
 });
 
 describe('Tokenizer', function(){
